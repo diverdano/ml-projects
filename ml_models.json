@@ -1,0 +1,8 @@
+{
+    "SVC":{
+        "kernel": "",
+        "C": "",
+        "gamma": 100
+    },
+    "GaussianNB":{}
+}

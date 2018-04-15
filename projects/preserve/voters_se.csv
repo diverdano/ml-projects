@@ -1,0 +1,478 @@
+,Political Party,name,age,number,street
+0,Republican Party,Stephanie Cochran,49,11609,Blackwoods Ln
+1,Republican Party,Timothy Cochran,49,11609,Blackwoods Ln
+2,No Party Affiliation,Nilze Seda-Maurell,54,11639,Blackwoods Ln
+3,No Party Affiliation,Orestes Maurell,55,11639,Blackwoods Ln
+4,Republican Party,Russell Devick,72,11640,Blackwoods Ln
+5,Republican Party,Susan Devick,68,11640,Blackwoods Ln
+6,Republican Party,Heather Devick,36,11640,Blackwoods Ln
+7,Republican Party,Alishia Garcia,26,11669,Blackwoods Ln
+8,No Party Affiliation,Andrew Garcia,21,11669,Blackwoods Ln
+9,Republican Party,Richard Ahrens,70,11669,Blackwoods Ln
+10,Republican Party,Judy Ahrens,54,11669,Blackwoods Ln
+11,No Party Affiliation,Allyson Anetrella Handel,59,11670,Blackwoods Ln
+12,No Party Affiliation,David Goldberg,61,11670,Blackwoods Ln
+13,Republican Party,Angelo Marino,76,11699,Blackwoods Ln
+14,Republican Party,Shirley Marino,73,11699,Blackwoods Ln
+15,Democratic Party,Jennifer Stedman,33,11700,Blackwoods Ln
+16,Democratic Party,Karen Stedman,63,11700,Blackwoods Ln
+17,Democratic Party,Eleanor Fleury,90,11700,Blackwoods Ln
+18,Democratic Party,Ernest Fleury,90,11700,Blackwoods Ln
+19,Democratic Party,Robert Mitten,41,11759,Blackwoods Ln
+20,Democratic Party,Fermal Simpson,67,11760,Blackwoods Ln
+21,Democratic Party,Latanya Simpson,64,11760,Blackwoods Ln
+22,No Party Affiliation,Thomas Bailey,81,11789,Blackwoods Ln
+23,No Party Affiliation,Carol Bailey,73,11789,Blackwoods Ln
+24,Republican Party,Judith Koelz,66,11790,Blackwoods Ln
+25,Republican Party,Kent Koelz,68,11790,Blackwoods Ln
+26,Republican Party,Kimberly Koelz,34,11790,Blackwoods Ln
+27,Democratic Party,Judith Yarnell,67,11819,Blackwoods Ln
+28,Democratic Party,Jordy Yarnell,28,11819,Blackwoods Ln
+29,No Party Affiliation,Vilas Shah,72,11849,Blackwoods Ln
+30,Republican Party,Niranjan Shah,76,11849,Blackwoods Ln
+31,Republican Party,Daniel May,29,11527,Buckhaven Ln
+32,Democratic Party,Valerie Connors,27,11527,Buckhaven Ln
+33,Republican Party,Christina Curl,41,11535,Buckhaven Ln
+34,No Party Affiliation,James Cayton,43,11535,Buckhaven Ln
+35,No Party Affiliation,Gregory Curl,46,11535,Buckhaven Ln
+36,Republican Party,Donald Curl,69,11535,Buckhaven Ln
+37,Democratic Party,Karen Curl,69,11535,Buckhaven Ln
+38,Democratic Party,Claire Fluker,29,11543,Buckhaven Ln
+39,Democratic Party,Clifton Fluker,70,11543,Buckhaven Ln
+40,Republican Party,Rocio Pincus,56,11550,Buckhaven Ln
+41,Republican Party,Lewis Pincus,58,11550,Buckhaven Ln
+42,Republican Party,Susan Derstine,62,11550,Buckhaven Ln
+43,No Party Affiliation,James Dean,60,11551,Buckhaven Ln
+44,Republican Party,Sandra Dean,65,11551,Buckhaven Ln
+45,Democratic Party,David Eiler,53,11558,Buckhaven Ln
+46,Democratic Party,Robin Sanford-Eiler,57,11558,Buckhaven Ln
+47,Democratic Party,Jenna Gentile,20,11558,Buckhaven Ln
+48,Democratic Party,Robert Mills,102,11558,Buckhaven Ln
+49,Republican Party,Toi Bennett,56,11559,Buckhaven Ln
+50,No Party Affiliation,Billie Siedow,42,11559,Buckhaven Ln
+51,Democratic Party,Arthur Anderson,76,11559,Buckhaven Ln
+52,Democratic Party,Mildred Anderson,72,11559,Buckhaven Ln
+53,Republican Party,Dina Bruder,49,11566,Buckhaven Ln
+54,Republican Party,George Bruder,52,11566,Buckhaven Ln
+55,Democratic Party,James Giacone,51,11575,Buckhaven Ln
+56,Republican Party,Michael Buttelman,57,11576,Buckhaven Ln
+57,Republican Party,Aida Corral-Buttelman,54,11576,Buckhaven Ln
+58,Republican Party,Michael Buttelman,19,11576,Buckhaven Ln
+59,Republican Party,Lindsey Watson,27,11583,Buckhaven Ln Unit B
+60,Republican Party,Philip Rothbart,86,11583,Buckhaven Ln
+61,Republican Party,Karl Watson,53,11583,Buckhaven Ln Unit B
+62,Republican Party,Valerie Rothbart,69,11583,Buckhaven Ln
+63,Republican Party,Sona Kundalkar,36,11591,Buckhaven Ln
+64,Republican Party,Rajiv Kundalkar,69,11591,Buckhaven Ln
+65,Republican Party,Bhagyashree Kundalkar,67,11591,Buckhaven Ln
+66,Republican Party,Brook Thomas,50,11850,Carnegie Pl
+67,Republican Party,Laura Thomas,45,11850,Carnegie Pl
+68,No Party Affiliation,Kenneth Fuquay,60,11955,Carnegie Pl
+69,Republican Party,Margarita Fuquay,58,11955,Carnegie Pl
+70,Democratic Party,Jessica Fuquay,26,11955,Carnegie Pl
+71,Republican Party,Ryan Mabry,29,11971,Carnegie Pl
+72,Republican Party,Samuel Horwitz,30,11971,Carnegie Pl
+73,Republican Party,Suzanne Horwitz,55,11971,Carnegie Pl
+74,Republican Party,Marcy Duckworth,52,11837,Dunbar Ct
+75,Republican Party,Edgar Duckworth,54,11837,Dunbar Ct
+76,Democratic Party,Dianne Boniface-Hannon,59,11838,Dunbar Ct
+77,Democratic Party,John Hannon,69,11838,Dunbar Ct
+78,Democratic Party,Lawrence Langer,69,11853,Dunbar Ct
+79,Democratic Party,Tina Langer,71,11853,Dunbar Ct
+80,Democratic Party,Louis Riseman,93,11854,Dunbar Ct
+81,Independence Party Of Florida,Stephen Riseman,62,11854,Dunbar Ct
+82,Republican Party,Beverly Koffler,85,11865,Dunbar Ct
+83,Republican Party,Peter Koffler,62,11865,Dunbar Ct
+84,Republican Party,Jill Leach,58,11870,Dunbar Ct
+85,Republican Party,Gregory Leach,65,11870,Dunbar Ct
+86,Democratic Party,Diane De Lillo,55,11875,Dunbar Ct
+87,Democratic Party,Carmelina Pineiro,54,11894,Dunbar Ct
+88,No Party Affiliation,Luis Pineiro,54,11894,Dunbar Ct
+89,No Party Affiliation,Jeanemile Maignan,50,8552,Gullane Ct
+90,Democratic Party,Monise Maignan,51,8552,Gullane Ct
+91,Democratic Party,Jamie Maignan,19,8552,Gullane Ct
+92,Democratic Party,Tyler Maignan,17,8552,Gullane Ct
+93,Republican Party,Lawrence Barnard,57,8572,Gullane Ct
+94,Democratic Party,Deneyse Barnard,60,8572,Gullane Ct
+95,Republican Party,Carol Grover,63,8572,Gullane Ct
+96,Republican Party,John Grover,69,8572,Gullane Ct
+97,No Party Affiliation,Anthony Varbaro,52,8611,Gullane Ct
+98,Democratic Party,Ann Sponder,48,8611,Gullane Ct
+99,Republican Party,Gilbert Diaz-Granados,67,8612,Gullane Ct
+100,Republican Party,Geraldine Diaz-Granados,55,8612,Gullane Ct
+101,Republican Party,Mignon Gardner,81,8631,Gullane Ct
+102,Republican Party,William Gardner,87,8631,Gullane Ct
+103,Republican Party,Walter Martinez,76,8632,Gullane Ct
+104,Republican Party,Kimberly Hodge,48,8632,Gullane Ct
+105,Republican Party,Joyce Martinez,68,8632,Gullane Ct
+106,No Party Affiliation,Cynthia Bufo,55,11830,Keswick Way
+107,Republican Party,Steve Kauff,58,11831,Keswick Way
+108,Republican Party,Luis Sirotzky,71,11842,Keswick Way
+109,No Party Affiliation,Veronica Sirotzky,52,11842,Keswick Way
+110,No Party Affiliation,Anthony Criso,81,11843,Keswick Way
+111,Republican Party,Claudette Criso,80,11843,Keswick Way
+112,No Party Affiliation,James Cuba,71,11854,Keswick Way
+113,No Party Affiliation,Donna Cuba,56,11854,Keswick Way
+114,Republican Party,Linda Danielle,66,11866,Keswick Way
+115,Republican Party,Joseph Danielle,68,11866,Keswick Way
+116,Republican Party,Regina Gillespie,82,11867,Keswick Way
+117,No Party Affiliation,Ashley Rivardo,19,11878,Keswick Way
+118,Republican Party,K Torti-Kemmer,45,11878,Keswick Way
+119,Republican Party,Donald Kemmer,46,11878,Keswick Way
+120,Republican Party,David Chernin,50,11879,Keswick Way
+121,Republican Party,Monique Chernin,54,11879,Keswick Way
+122,No Party Affiliation,Brenden Chernin,19,11879,Keswick Way
+123,Republican Party,Frank Bolton,62,11891,Keswick Way
+124,No Party Affiliation,Lurline Dumay,51,11900,Keswick Way
+125,Democratic Party,Sashion Dumay,31,11900,Keswick Way
+126,Republican Party,Cornell Peters,35,11900,Keswick Way
+127,Republican Party,Natalie Peters,41,11900,Keswick Way
+128,No Party Affiliation,Alice Smith,81,11900,Keswick Way
+129,Republican Party,Theodore Shapiro,78,11980,Keswick Way
+130,Republican Party,Arlene Shapiro,73,11980,Keswick Way
+131,Republican Party,Stephen Morris,53,11831,Leeth Ct
+132,Libertarian Party,Matthew Morris,21,11831,Leeth Ct
+133,Democratic Party,Bradly Miller,25,11851,Leeth Ct
+134,Republican Party,Tyler Lee,25,11851,Leeth Ct
+135,No Party Affiliation,Larissa Colon Bengoa,48,11851,Leeth Ct
+136,No Party Affiliation,Alejandro Tapia,47,11851,Leeth Ct
+137,No Party Affiliation,Kelley Lanagan,55,11851,Leeth Ct
+138,Republican Party,Kenneth Snyder,58,11870,Leeth Ct
+139,Democratic Party,Beth Horowitz,58,11870,Leeth Ct
+140,Republican Party,Maria Dattolo,20,11871,Leeth Ct
+141,Republican Party,Robert Dattolo,23,11871,Leeth Ct
+142,Republican Party,Julia Dattolo,55,11871,Leeth Ct
+143,Republican Party,Robert Dattolo,58,11871,Leeth Ct
+144,Republican Party,Elias Nathanson,81,11890,Leeth Ct
+145,Democratic Party,Pearl Nathanson,82,11890,Leeth Ct
+146,Independence Party Of Florida,Rebecca Mcdermott,43,11891,Leeth Ct
+147,Republican Party,Martin Mcdermott,43,11891,Leeth Ct
+148,Independence Party Of Florida,David Arias-Bran,22,11891,Leeth Ct
+149,Republican Party,Christopher Ray,30,11771,Littlestone Ct
+150,Republican Party,Brenda Ray,70,11771,Littlestone Ct
+151,No Party Affiliation,Harold Ray,62,11771,Littlestone Ct
+152,No Party Affiliation,Henry Conover,71,11783,Littlestone Ct
+153,Republican Party,Sindy Conover,56,11783,Littlestone Ct
+154,Republican Party,Brandon Breland,37,11807,Littlestone Ct
+155,No Party Affiliation,Lorenzo Rusin,50,11807,Littlestone Ct
+156,Republican Party,Joseph Blair,55,11831,Littlestone Ct
+157,Republican Party,Faith Blair,56,11831,Littlestone Ct
+158,Republican Party,Elliot Isban,73,8581,Marlamoor Ln
+159,No Party Affiliation,Ellin Isban,72,8581,Marlamoor Ln
+160,Democratic Party,Luis Small Ii,23,8604,Marlamoor Ln
+161,Democratic Party,Lorraine Lawal,75,8604,Marlamoor Ln
+162,Democratic Party,Hanjaratu Small,51,8604,Marlamoor Ln
+163,No Party Affiliation,Luis Small,54,8604,Marlamoor Ln
+164,Republican Party,Jennifer Poteet,37,8605,Marlamoor Ln
+165,No Party Affiliation,Michael Poteet,56,8605,Marlamoor Ln
+166,Republican Party,Jordan Poteet,34,8605,Marlamoor Ln
+167,Democratic Party,Adam Gay,52,8617,Marlamoor Ln
+168,Democratic Party,Christine Lange,52,8617,Marlamoor Ln
+169,Republican Party,Kimberly Pacy,60,8618,Marlamoor Ln
+170,Republican Party,Ralph Pacy,58,8618,Marlamoor Ln
+171,Democratic Party,Doris Blaine,73,8629,Marlamoor Ln
+172,No Party Affiliation,Zdzislaw Koziel,64,8629,Marlamoor Ln
+173,Democratic Party,Amber Ross,29,8630,Marlamoor Ln
+174,Democratic Party,James Merola,29,8630,Marlamoor Ln
+175,Democratic Party,James Merola,69,8630,Marlamoor Ln
+176,Democratic Party,Mary Merola,68,8630,Marlamoor Ln
+177,Republican Party,Allen Greene,68,8641,Marlamoor Ln
+178,Republican Party,Gabrielle Manus,55,8641,Marlamoor Ln
+179,Democratic Party,Brian Schuman,58,8642,Marlamoor Ln
+180,No Party Affiliation,Sholom Koplovitz,79,8653,Marlamoor Ln
+181,No Party Affiliation,Elaine Solomon,70,8653,Marlamoor Ln
+182,No Party Affiliation,Kinna Patel,34,8654,Marlamoor Ln
+183,No Party Affiliation,Varsa Patel,59,8654,Marlamoor Ln
+184,Democratic Party,Joshua Kalloo,27,8665,Marlamoor Ln
+185,Republican Party,Rachel Mccullough,35,8665,Marlamoor Ln
+186,Republican Party,Curt Mccullough,49,8665,Marlamoor Ln
+187,Republican Party,Marcia Cianciolo,66,8666,Marlamoor Ln
+188,Republican Party,Vincent Cianciolo,70,8666,Marlamoor Ln
+189,No Party Affiliation,Richard Kreisner,61,8677,Marlamoor Ln
+190,Republican Party,Kathryn Kreisner,57,8677,Marlamoor Ln
+191,Republican Party,Wilson Lear,65,8678,Marlamoor Ln
+192,No Party Affiliation,Jeffrey Fussell,59,8678,Marlamoor Ln
+193,Democratic Party,James Ackley,59,8678,Marlamoor Ln
+194,Democratic Party,George Dunn,102,8690,Marlamoor Ln
+195,Democratic Party,E Dunn,54,8690,Marlamoor Ln
+196,Republican Party,Kathryn Kerrigan,37,8702,Marlamoor Ln
+197,Republican Party,Mark Scherbak,56,8725,Marlamoor Ln
+198,Republican Party,Barbara Scherbak,59,8725,Marlamoor Ln
+199,Republican Party,Neil Hayes,66,8733,Marlamoor Ln
+200,Republican Party,Rebecca Hayes,58,8733,Marlamoor Ln
+201,Republican Party,Emily Hayes,21,8733,Marlamoor Ln
+202,No Party Affiliation,Cathleen Spring,53,8738,Marlamoor Ln
+203,Republican Party,Jessica Spring,31,8738,Marlamoor Ln
+204,Republican Party,Christopher Spring,56,8738,Marlamoor Ln
+205,No Party Affiliation,Joanne Pasquale,71,8739,Marlamoor Ln
+206,No Party Affiliation,Dale Sparage,64,8739,Marlamoor Ln
+207,Democratic Party,Timothy Bauer,72,8751,Marlamoor Ln
+208,Democratic Party,Gerald Caruso,71,8751,Marlamoor Ln
+209,Democratic Party,Bobbi Bauer,60,8751,Marlamoor Ln
+210,Democratic Party,Bhikha Desai,87,8761,Marlamoor Ln
+211,Republican Party,Susan Luizinho,57,8762,Marlamoor Ln
+212,Republican Party,Antonio Luizinho,61,8762,Marlamoor Ln
+213,Democratic Party,Ankush Bansal,41,8762,Marlamoor Ln
+214,Republican Party,Sudhir Bansal,69,8762,Marlamoor Ln
+215,No Party Affiliation,Sally Matus,86,8786,Marlamoor Ln
+216,Republican Party,Charles Matus,97,8786,Marlamoor Ln
+217,No Party Affiliation,Betty Filson,85,8787,Marlamoor Ln
+218,No Party Affiliation,Daniel Filson,89,8787,Marlamoor Ln
+219,Republican Party,Kerry Levine,47,8798,Marlamoor Ln
+220,Democratic Party,Chloe Tuot,36,8810,Marlamoor Ln
+221,No Party Affiliation,Yves Le Cabec,76,8810,Marlamoor Ln
+222,No Party Affiliation,James Tuot,71,8810,Marlamoor Ln
+223,No Party Affiliation,Daniele Tuot,73,8810,Marlamoor Ln
+224,Democratic Party,Alexander Toledano,35,8810,Marlamoor Ln
+225,No Party Affiliation,Michelle Annunziata,59,8811,Marlamoor Ln
+226,No Party Affiliation,Frank Siciliano,60,8811,Marlamoor Ln
+227,No Party Affiliation,Shari Berman,61,8811,Marlamoor Ln
+228,Republican Party,Omar Leon,56,8821,Marlamoor Ln
+229,Republican Party,Margaret Leon,50,8821,Marlamoor Ln
+230,No Party Affiliation,Timothy Jones,48,8828,Marlamoor Ln
+231,Republican Party,Patrick Orlando,57,8833,Marlamoor Ln
+232,No Party Affiliation,Theresa Orlando,27,8833,Marlamoor Ln
+233,Republican Party,Catherine Lowe,67,8833,Marlamoor Ln
+234,Republican Party,Richard Volosen,70,8834,Marlamoor Ln
+235,Republican Party,Kristina Hedrick,44,8834,Marlamoor Ln
+236,Republican Party,Matthew Gallo,23,8839,Marlamoor Ln
+237,Republican Party,Andrew Gallo,21,8839,Marlamoor Ln
+238,No Party Affiliation,Cory Lytle,46,8839,Marlamoor Ln
+239,Democratic Party,Deborah Lytle,53,8839,Marlamoor Ln
+240,Republican Party,N Sala,67,8839,Marlamoor Ln
+241,Democratic Party,Emilia Hunerberg,52,8845,Marlamoor Ln
+242,Republican Party,Ronald Hunerberg,57,8845,Marlamoor Ln
+243,Republican Party,Thomas Stagnitti,94,8845,Marlamoor Ln
+244,Democratic Party,Austin Ehrler,24,8845,Marlamoor Ln
+245,Republican Party,Donald Ehrler,27,8845,Marlamoor Ln
+246,Republican Party,William Gaddis,70,8846,Marlamoor Ln
+247,Republican Party,Linda Gaddis,65,8846,Marlamoor Ln
+248,Democratic Party,Rena Wagstaff,55,8857,Marlamoor Ln
+249,No Party Affiliation,Deborah Miller,67,8858,Marlamoor Ln
+250,Republican Party,Reginald Miller,70,8858,Marlamoor Ln
+251,Democratic Party,Kim Hoffman,50,8869,Marlamoor Ln
+252,Democratic Party,Richard Hoffman,49,8869,Marlamoor Ln
+253,Democratic Party,Benjamin Hoffman,20,8869,Marlamoor Ln
+254,Republican Party,John Centrella,70,8870,Marlamoor Ln
+255,Republican Party,Rita Ann Lucci Centrella,56,8870,Marlamoor Ln
+256,Republican Party,Jason Bagnall,21,8870,Marlamoor Ln
+257,Republican Party,Jan Bagnall,52,8870,Marlamoor Ln
+258,Republican Party,Janelle Lemke,48,8881,Marlamoor Ln
+259,Republican Party,Roger Lemke,55,8881,Marlamoor Ln
+260,No Party Affiliation,Patrick Simpson,58,8882,Marlamoor Ln
+261,No Party Affiliation,Marcos Morales,32,8882,Marlamoor Ln
+262,No Party Affiliation,Dina Simpson,48,8882,Marlamoor Ln
+263,No Party Affiliation,Shauna Dowling,20,8893,Marlamoor Ln
+264,Republican Party,Frank Dowling,54,8893,Marlamoor Ln
+265,No Party Affiliation,Eileen Dowling,54,8893,Marlamoor Ln
+266,Democratic Party,Anne Lewis Cruz,57,8894,Marlamoor Ln
+267,Democratic Party,Celestino Cruz,67,8894,Marlamoor Ln
+268,Republican Party,Jean Konstantino,79,8905,Marlamoor Ln
+269,Republican Party,Theodore Konstantino,86,8905,Marlamoor Ln
+270,Republican Party,Lawrence Ginsberg,71,8906,Marlamoor Ln
+271,Democratic Party,Meena Persaud,60,8917,Marlamoor Ln
+272,Republican Party,Mohan Persaud,66,8917,Marlamoor Ln
+273,Democratic Party,Sherina Persaud,28,8917,Marlamoor Ln
+274,Republican Party,Stephanie Brooks,42,8918,Marlamoor Ln
+275,Republican Party,David Brooks,47,8919,Marlamoor Ln
+276,Republican Party,Kyle Papke,33,8929,Marlamoor Ln
+277,Republican Party,Julie Papke,34,8929,Marlamoor Ln
+278,Democratic Party,Dolores Keys,76,8930,Marlamoor Ln
+279,Democratic Party,Albert Keys,75,8930,Marlamoor Ln
+280,Republican Party,Carlo Basile,69,8941,Marlamoor Ln
+281,Republican Party,Josephine Basile,68,8941,Marlamoor Ln
+282,Democratic Party,Carmela Basile,93,8941,Marlamoor Ln
+283,Republican Party,Ian Hassin,75,8941,Marlamoor Ln
+284,Democratic Party,Arlene Hassin,72,8941,Marlamoor Ln
+285,Democratic Party,Cherese Bowe,45,14565,Northlake Blvd
+286,Democratic Party,Taryll Moore,38,14565,Northlake Blvd
+287,No Party Affiliation,Elizabeth Moore,34,14565,Northlake Blvd
+288,No Party Affiliation,Rebecca Cartwright,35,14612,Northlake Blvd
+289,Democratic Party,Beverley Fray,62,14726,Northlake Blvd
+290,Democratic Party,Shirley Branchesi,63,14765,Northlake Blvd
+291,Democratic Party,Annie Wooden,63,14765,Northlake Blvd
+292,Democratic Party,Mark Eichler,44,14765,Northlake Blvd
+293,No Party Affiliation,Guillermo Duran,67,14765,Northlake Blvd
+294,No Party Affiliation,Matthew Kennedy,25,14842,Northlake Blvd
+295,No Party Affiliation,Elaine Madnick,80,14842,Northlake Blvd
+296,Democratic Party,Eduardo Baquero,31,14842,Northlake Blvd
+297,Republican Party,Delfina Rosario,49,14842,Northlake Blvd
+298,Republican Party,Luis Rosario-Febus,55,14842,Northlake Blvd
+299,Democratic Party,Debra Roberts,59,15058,Northlake Blvd
+300,Republican Party,Hermie Roberts,59,15058,Northlake Blvd
+301,Democratic Party,Naomi Pitter,24,15058,Northlake Blvd
+302,Democratic Party,Jalyn Simms,21,15058,Northlake Blvd
+303,Democratic Party,Barbara Turner,76,15090,Northlake Blvd
+304,No Party Affiliation,Hernando Roca,44,15093,Northlake Blvd
+305,No Party Affiliation,Tami Roca,44,15093,Northlake Blvd
+306,Democratic Party,Martha Roca,73,15093,Northlake Blvd
+307,No Party Affiliation,Rebecca Demosthene,42,15130,Northlake Blvd
+308,No Party Affiliation,Tiara Gonzalez,28,15134,Northlake Blvd
+309,Democratic Party,Powerfull Little,35,15134,Northlake Blvd
+310,Democratic Party,Michael Pereira,54,15135,Northlake Blvd
+311,Democratic Party,Daisy Olmo,59,15135,Northlake Blvd
+312,Democratic Party,Violeta Machuca,78,15135,Northlake Blvd
+313,Republican Party,Juan Betancourt,47,15173,Northlake Blvd
+314,Republican Party,Carmen Betancourt,87,15173,Northlake Blvd
+315,Republican Party,Jose Betancourt,41,15173,Northlake Blvd
+316,Democratic Party,Deborah Fox,57,15223,Northlake Blvd
+317,No Party Affiliation,Kenneth Fox,62,15223,Northlake Blvd
+318,No Party Affiliation,Kingsley Fox,36,15223,Northlake Blvd
+319,No Party Affiliation,Kenneth Mantovani,38,15248,Northlake Blvd
+320,Democratic Party,Raquel Sutton,49,15362,Northlake Blvd
+321,Democratic Party,Ramon Hambrite,22,15362,Northlake Blvd
+322,Democratic Party,Courtney Hambrite,18,15362,Northlake Blvd
+323,Republican Party,Trinh Pham,51,15397,Northlake Blvd
+324,Democratic Party,Men Tran,49,15397,Northlake Blvd
+325,Democratic Party,Loc Tran,53,15397,Northlake Blvd
+326,Democratic Party,Phillip Tran,18,15397,Northlake Blvd
+327,Republican Party,Thuy Uyen Nguyen,40,15517,Northlake Blvd
+328,Democratic Party,Tai Dao,65,15517,Northlake Blvd
+329,No Party Affiliation,Deon Burton,71,11528,Riverchase Run
+330,Democratic Party,Keith Drescher,69,11529,Riverchase Run
+331,Democratic Party,Frances Drescher,64,11529,Riverchase Run
+332,Republican Party,Marie Mcphail,62,11559,Riverchase Run
+333,Democratic Party,William Roaf,47,11559,Riverchase Run
+334,Republican Party,Rose Macpherson,77,11588,Riverchase Run
+335,Republican Party,Ryan Rose,46,11589,Riverchase Run
+336,Republican Party,Rui Pinto,47,11589,Riverchase Run
+337,Green Party Of Florida,Paul Stevenson,50,11618,Riverchase Run
+338,Republican Party,Jacqueline Murgio,59,11618,Riverchase Run
+339,Republican Party,Anthony Murgio,34,11618,Riverchase Run
+340,No Party Affiliation,Michael Murgio,67,11618,Riverchase Run
+341,No Party Affiliation,Janice Desjarlais,57,11619,Riverchase Run
+342,No Party Affiliation,Brian Desjarlais,55,11619,Riverchase Run
+343,No Party Affiliation,Joanne Jarolem,51,11646,Riverchase Run
+344,No Party Affiliation,Richard Jarolem,48,11646,Riverchase Run
+345,Democratic Party,Harry Haroutunian,66,11647,Riverchase Run
+346,Republican Party,Connery Haroutunian,23,11647,Riverchase Run
+347,No Party Affiliation,Salma Ali,51,11677,Riverchase Run
+348,No Party Affiliation,Shahzad Ali,56,11677,Riverchase Run
+349,Republican Party,James Kilduff,60,11677,Riverchase Run
+350,Republican Party,Angela Kilduff,55,11677,Riverchase Run
+351,No Party Affiliation,Shamshad Ali,20,11677,Riverchase Run
+352,Republican Party,Michael Goodboe,74,11678,Riverchase Run
+353,Republican Party,Zelia Goodboe,68,11678,Riverchase Run
+354,Republican Party,Katherine Fischer,20,11708,Riverchase Run
+355,No Party Affiliation,Eric Fischer,59,11708,Riverchase Run
+356,Republican Party,Cathy Fischer,52,11708,Riverchase Run
+357,No Party Affiliation,Jesus Lizardi,64,11709,Riverchase Run Lot 202
+358,No Party Affiliation,Diana Lizardi,34,11709,Riverchase Run
+359,No Party Affiliation,Lilia Lizardi,60,11709,Riverchase Run
+360,Democratic Party,Deborah Kuntz,64,11737,Riverchase Run
+361,Democratic Party,Howard Kuntz,66,11737,Riverchase Run
+362,Republican Party,Jeffrey Bong,42,11738,Riverchase Run
+363,No Party Affiliation,Kim Bong,73,11738,Riverchase Run
+364,Democratic Party,Richard Weinberg,82,11758,Riverchase Run
+365,Democratic Party,Margie Weinberg,73,11758,Riverchase Run
+366,No Party Affiliation,David Walker,62,11759,Riverchase Run
+367,Democratic Party,Brandon Walker,30,11759,Riverchase Run
+368,Republican Party,Patrick Argento,71,11859,Sanbourn Ct
+369,Republican Party,Janette Argento,71,11859,Sanbourn Ct
+370,Democratic Party,Patrick Argento,49,11859,Sanbourn Ct
+371,Republican Party,Gerard Lemongello,57,11860,Sanbourn Ct
+372,No Party Affiliation,Dawn Lemongello,52,11860,Sanbourn Ct
+373,Republican Party,Tristan Lemongello,21,11860,Sanbourn Ct
+374,No Party Affiliation,Barbara Bruckner,58,11879,Sanbourn Ct
+375,Democratic Party,Jessica Bruckner,22,11879,Sanbourn Ct
+376,Republican Party,William Bruckner,54,11879,Sanbourn Ct
+377,Republican Party,Bonnie Mawby,56,11880,Sanbourn Ct
+378,Democratic Party,John Austin,42,11880,Sanbourn Ct
+379,Republican Party,Mitchell Huhn,55,11880,Sanbourn Ct
+380,No Party Affiliation,James Donnini,64,11520,Stonehaven Way
+381,Republican Party,Kaleigh Donnini,29,11520,Stonehaven Way
+382,Republican Party,Kerry Delaney,44,11570,Stonehaven Way
+383,Republican Party,Keira Delaney,19,11570,Stonehaven Way
+384,Republican Party,David Delaney,46,11570,Stonehaven Way
+385,Democratic Party,Errol Stern,73,11590,Stonehaven Way
+386,No Party Affiliation,Leslie Mcintosh,63,11590,Stonehaven Way
+387,Democratic Party,Ama Dubell,79,11610,Stonehaven Way
+388,Democratic Party,Thomas Dubell,80,11610,Stonehaven Way
+389,No Party Affiliation,Robert Gambolati,42,11630,Stonehaven Way
+390,Democratic Party,Mary Gambolati,76,11630,Stonehaven Way
+391,No Party Affiliation,Ronald Gambolati,76,11630,Stonehaven Way
+392,Independence Party Of Florida,Deborah Aversa,67,11650,Stonehaven Way
+393,Republican Party,Kevin Dearden,61,11651,Stonehaven Way
+394,Democratic Party,Bernard Moses,84,11670,Stonehaven Way
+395,Democratic Party,Debra Stephens,55,11670,Stonehaven Way
+396,Republican Party,Don Stephens,57,11670,Stonehaven Way
+397,Democratic Party,Asha Stephens,23,11670,Stonehaven Way
+398,No Party Affiliation,Don Stephens,25,11670,Stonehaven Way
+399,No Party Affiliation,Joyce Goldin,74,11671,Stonehaven Way
+400,No Party Affiliation,J Goldin,75,11671,Stonehaven Way
+401,No Party Affiliation,James Cole,68,11690,Stonehaven Way
+402,Democratic Party,Nancy Cole,69,11690,Stonehaven Way
+403,Democratic Party,Ramon Rosado,59,11691,Stonehaven Way
+404,Republican Party,Priscilla Martinez,20,11691,Stonehaven Way
+405,Republican Party,Claudia Martinez,22,11691,Stonehaven Way
+406,No Party Affiliation,Gloria Martinez,54,11691,Stonehaven Way
+407,Republican Party,Ricardo Martinez,55,11691,Stonehaven Way
+408,Republican Party,Gloria Rosado,54,11691,Stonehaven Way
+409,Republican Party,Maureen Owens,66,11710,Stonehaven Way
+410,Republican Party,Frank Owens,74,11710,Stonehaven Way
+411,Republican Party,Maureen Winter,76,11730,Stonehaven Way
+412,Republican Party,John Winter,81,11730,Stonehaven Way
+413,Republican Party,John Barrett,65,11731,Stonehaven Way
+414,No Party Affiliation,Nicolas Barrett,26,11731,Stonehaven Way
+415,Democratic Party,Daniel Lowenthal,26,11750,Stonehaven Way
+416,Democratic Party,Amy Lowenthal,57,11750,Stonehaven Way
+417,Democratic Party,Bruce Lowenthal,62,11750,Stonehaven Way
+418,Democratic Party,Zoe Lowenthal,21,11750,Stonehaven Way
+419,No Party Affiliation,Adrienne Grand,33,11751,Stonehaven Way
+420,Democratic Party,Suzette Conner,57,11751,Stonehaven Way
+421,Democratic Party,Richard Conner,57,11751,Stonehaven Way
+422,Republican Party,Michael Gates,61,11771,Stonehaven Way
+423,Republican Party,Bonnie Gates,68,11771,Stonehaven Way
+424,Republican Party,Sara Gates,33,11771,Stonehaven Way
+425,Democratic Party,Linnie Supall,32,11791,Stonehaven Way
+426,Democratic Party,Patricia Sherron,64,11791,Stonehaven Way
+427,Democratic Party,Byron Burks,59,11791,Stonehaven Way
+428,Republican Party,Lewis Pomper,77,11811,Stonehaven Way
+429,Republican Party,Regina Pomper,78,11811,Stonehaven Way
+430,Democratic Party,Christine Kokkinos,55,11831,Stonehaven Way
+431,Democratic Party,Emmanuel Kokkinos,52,11831,Stonehaven Way
+432,Democratic Party,Susan Mastres,72,11850,Stonehaven Way
+433,No Party Affiliation,Lacey Wright,35,11851,Stonehaven Way
+434,Republican Party,Barry Barnes,77,11851,Stonehaven Way
+435,Republican Party,Linda Wright,67,11851,Stonehaven Way
+436,Republican Party,John Weingarten,73,11870,Stonehaven Way
+437,Democratic Party,Beth Weingarten,66,11870,Stonehaven Way
+438,Republican Party,Arthur Crouse,85,11871,Stonehaven Way
+439,Republican Party,Delores Crouse,85,11871,Stonehaven Way
+440,Republican Party,Arthur Crouse,55,11871,Stonehaven Way
+441,Republican Party,Debra Vandette,63,11871,Stonehaven Way
+442,Republican Party,Scott Leitten,51,11860,Torreyanna Cir
+443,Republican Party,Andrea Leitten,48,11860,Torreyanna Cir
+444,Republican Party,Donald Beuerle,55,11870,Torreyanna Cir
+445,Republican Party,Denae Beuerle,46,11870,Torreyanna Cir
+446,Democratic Party,Gaspare Volpe,81,11880,Torreyanna Cir
+447,Republican Party,Margaret Volpe,81,11880,Torreyanna Cir
+448,Republican Party,Sharon Mcgoldrick,51,11890,Torreyanna Cir
+449,Republican Party,John Mcgoldrick,51,11890,Torreyanna Cir
+450,Democratic Party,Brian Feldman,66,11900,Torreyanna Cir
+451,Democratic Party,Robin Feldman,64,11900,Torreyanna Cir
+452,No Party Affiliation,George Adams,71,11910,Torreyanna Cir
+453,No Party Affiliation,Maria Adams,64,11910,Torreyanna Cir
+454,Republican Party,Sean Ryan,24,11920,Torreyanna Cir
+455,Democratic Party,Sherry Marcellino,60,11920,Torreyanna Cir
+456,Republican Party,Thomas Ryan,72,11920,Torreyanna Cir
+457,Democratic Party,Alexander Shteiman,56,11930,Torreyanna Cir
+458,Republican Party,Max Shteiman,20,11930,Torreyanna Cir
+459,No Party Affiliation,Karen Brusca,60,11940,Torreyanna Cir
+460,Republican Party,Andrew Brusca,22,11940,Torreyanna Cir
+461,No Party Affiliation,Matthew Brusca,30,11940,Torreyanna Cir
+462,Republican Party,Richard Brusca,60,11940,Torreyanna Cir
+463,Republican Party,Andrew Dodson,93,11950,Torreyanna Cir Unit A
+464,Republican Party,Deborah Ryan,64,11950,Torreyanna Cir
+465,Republican Party,John Ryan,66,11950,Torreyanna Cir
+466,Democratic Party,Benjamin Blakely,24,11960,Torreyanna Cir
+467,No Party Affiliation,Merry Sims,61,11960,Torreyanna Cir
+468,No Party Affiliation,John Sims,59,11960,Torreyanna Cir
+469,Democratic Party,Leslie Blakely,60,11960,Torreyanna Cir
+470,Democratic Party,Randy Blakely,59,11960,Torreyanna Cir
+471,Libertarian Party,Amy Faris,26,11970,Torreyanna Cir
+472,Republican Party,Molly Faris,24,11970,Torreyanna Cir
+473,Republican Party,Kirk Faris,21,11970,Torreyanna Cir
+474,Republican Party,Cathleen Faris,58,11970,Torreyanna Cir
+475,Republican Party,Ronald Faris,55,11970,Torreyanna Cir
+476,Democratic Party,Christopher Burras,64,11980,Torreyanna Cir

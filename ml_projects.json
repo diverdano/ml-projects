@@ -1,0 +1,107 @@
+{
+    "student":{
+        "file": "projects/student_intervention/student-data.csv",
+        "target": "passed",
+        "features": [
+            "age",
+            "Medu",
+            "Fedu",
+            "traveltime",
+            "studytime",
+            "failures",
+            "famrel",
+            "freetime",
+            "goout",
+            "Dalc",
+            "Walc",
+            "health",
+            "absences"
+        ]
+    },
+    "wine":{
+        "files":{
+          "offers"      : "projects/datasmart/wine_offers.csv",
+          "transactions": "projects/datasmart/wine_trans.csv"
+        },
+        "data": ""
+    },
+    "reg":{
+        "target": "",
+        "data": ""
+    },
+    "lc":{
+        "target": "",
+        "data": ""
+    },
+    "family_offices":{
+        "file": "/Users/dan/Documents/dan/consulting/clients/do_fo_strip.csv"
+    },
+    "vix_history":{
+        "file": "projects/markets/vix.csv"
+    },
+    "inc5000":{
+        "file": "projects/inc5000/clean_inc5000_2017.csv"
+    },
+    "inc5k_leaders":{
+        "file": "projects/inc5000/raw_inc5000_2017_leadership.csv"
+    },
+    "inc5k_rev":{
+        "file": "projects/inc5000/raw_inc5000_2017_rev.csv"
+    },
+    "credit_unions":{
+        "file": "projects/cr_unions/Credit Union Branch Information.txt",
+        "type": "csv"
+    },
+    "credit_union_accounts":{
+        "file": "projects/cr_unions/fs220.txt",
+        "type": "csv"
+    },
+    "banks":{
+        "file": "projects/banks/banks-300m-aum-2016-06.txt",
+        "type": "tab"
+    },
+    "titanic": {
+        "file": "projects/titanic_survival_exploration/titanic_data.csv",
+        "target": "Survived",
+        "features": [
+            "PassengerId",
+            "Pclass",
+            "SibSp",
+            "Parch",
+            "Fare"
+        ],
+        "drop": "Age"
+    },
+    "olympics": {
+        "file": "projects/olympics/olympic_medals.csv",
+        "target": "country_name",
+        "features": [
+            "gold",
+            "silver",
+            "bronze",
+            "points"
+        ]
+    },
+    "boston_housing": {
+        "file": "projects/boston_housing/housing.csv",
+        "target": "MEDV",
+        "features": [
+            "RM",
+            "LSTAT",
+            "PTRATIO"
+        ]
+    },
+    "sleep_scores": {
+        "file": "projects/sleep/sleep.csv",
+        "target": "scores",
+        "features": [
+            "sleep"
+        ]
+    },
+    "terrain": {
+    },
+    "pima-indians-diabetes": {
+        "url":  "https://archive.ics.uci.edu/ml/machine-learning-databases/pima-indians-diabetes/pima-indians-diabetes.data",
+        "names": ["preg", "plas", "pres", "skin","test", "mass", "pedi", "age", "class"]
+    }
+}
