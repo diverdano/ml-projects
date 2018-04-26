@@ -8,6 +8,7 @@ import numpy as np
 import simplejson as json
 import csv                                      # for csv sniffer
 import logging
+import requests                                 # requesting URL's
 import html5lib
 
 # data sets
@@ -21,7 +22,12 @@ logger = logging.getLogger(__name__)
 
 # == data ==
 
-def readHTML2df(html):      # requires html5lib
+def getHTML(url):
+    '''use pandas to capture html table data'''
+    response = requests.get(url)
+    return response.content
+
+def HTML2df(html):      # requires html5lib
     '''load html table data to pandas DataFrame'''
     return pd.read_html(html)
 

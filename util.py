@@ -10,7 +10,6 @@ from datetime   import date, timedelta, datetime
 from time       import localtime, strftime, strptime, sleep, mktime
 import logging
 import logging.config                                       # pythons logging feature
-import requests                                             # requesting URL's
 
 ## ===================================
 ## === logging to file and console ===
@@ -48,11 +47,6 @@ logger = logging.getLogger(__name__)
 ## =========================
 ## === support functions ===
 ## =========================
-
-def getHTML(url):
-    '''use pandas to capture html table data'''
-    response = requests.get(url)
-    return response.content
 
 def date2epoch(value, option=1):
     if int(option) == 1  : pattern = '%Y-%m-%d'
