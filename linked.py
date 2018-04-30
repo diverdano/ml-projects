@@ -2,6 +2,7 @@
 
 
 # === load libraries ===
+import util
 import util_data
 import html
 
@@ -25,20 +26,31 @@ class Job(object):
     location    = ''
     other       = ''
     def __init__(self, text):
-        text.strip('Job Title\n')
+        self.parseLine(text)
+        # self.titleExcept()
+    def parseLine(self,text):
         self.role, segment1 = text.split(' Company Name\n')
         self.co, segment2   = segment1.split('\nJob Location')
         self.other          = segment2.split('\n')
         self.location       = self.other.pop(0)
+    def titleExcept(self):
+        self.role           = util.titleExcept(self.role)
+        self.co             = util.titleExcept(self.co)
+        self.location       = util.titleExcept(self.location)
+        self.other          = [util.titleExcept(item) for item in self.other]
     def __repr__(self):
         return('role: {0}, co: {1}, location: {2}, other: {3}'.format(self.role, self.co, self.location, self.other))
     def __str__(self):
+        return('{0}, {1}, {2}, '.format(self.role, self.co, self.location) + ", ".join(self.other))
+    def __str2__(self):
         return({
             'co'        : self.co,
             'role'      : self.role,
             'location'  : self.location,
             'other'     : self.other
         })
+    def __str3__(self):
+        return([self.role, self.co, self.location] + self.other)
 
 def getJobsTxt(file='/Users/dan/Downloads/linked.txt'):
     jobs = []
@@ -47,8 +59,8 @@ def getJobsTxt(file='/Users/dan/Downloads/linked.txt'):
     for line in lines:
         job = []
         cta = []
-        if line[:9] == 'Job Title':
-            line = line[9:]
+        if line[:10] == 'Job Title\n':
+            line = line[10:]
             jobs.append(Job(line))
         elif line[:5] == 'Apply':
             cta = line.split('\n')

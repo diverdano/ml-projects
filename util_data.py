@@ -132,6 +132,12 @@ def readFile(file):
     with open(file, 'r') as infile: data=infile.read()
     return data
 
+def writeCSV(file, data, headers=None):
+    ''' saves data to csv delimited file '''
+    with open(file, 'w') as outfile:
+        csv_writer = csv.writer(outfile, dialect='excel')
+        csv_writer.writerows(data) 
+
 def loadData(file):
     '''check file delimiter and load data set as pandas.DataFrame'''
     try:

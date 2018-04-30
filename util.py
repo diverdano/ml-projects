@@ -87,3 +87,10 @@ def pickDate(offset=0, show_date=True):
     day = datetime(now.year, now.month, now.day)
     if show_date == True: logger.info('datestamp applied: ' + day.strftime("%Y-%m-%d"))
     return day.strftime("%Y-%m-%d")
+
+def titleExcept(s, exceptions=[]):
+    word_list = s.split()
+    final = [word_list[0].capitalize()]
+    for word in word_list[1:]:
+        final.append(word.lower() if word.lower() in exceptions else word.capitalize())
+    return " ".join(final)
