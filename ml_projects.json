@@ -25,6 +25,14 @@
         },
         "data": ""
     },
+    "mandrill":{
+        "files":{
+          "mandrill"    : "projects/datasmart/mandrill-app.txt",
+          "other"       : "projects/datasmart/mandrill-other.txt"
+        },
+        "data": "documents",
+        "note": "load each document for parsing - nlp data"
+    },
     "reg":{
         "target": "",
         "data": ""

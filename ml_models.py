@@ -35,6 +35,9 @@ Support Vector Machines (SVM)
 Logistic Regression
 '''
 # TODO test these
+import spacy                                                            # nlp (newer/faster than nltk)
+nlp = spacy.load('en_core_web_sm')                                      # loads english core model
+
 from sklearn.gaussian_process import GaussianProcessClassifier
 from sklearn.gaussian_process.kernels import RBF
 from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis # aka QDA
@@ -157,6 +160,19 @@ def printLinearRegressionModel():
 
 # == model object ==
 
+class WordBag(object):
+    ''' manipulate word bags '''
+    def __init__(self, project):
+        self.bag        = util_data.ProjectData(project)
+    def tokenize(self):
+        for docs in self.bag.docs:
+            for doc in docs:
+                doc = nlp(doc)          # still working here
+    def test_spacy(self, text=u'Apple is looking at buying U.K. startup for $1 billion'):
+        print(text)
+        doc = nlp(text)
+        for token in doc:
+            print(token.text, token.pos_, token.dep_)
 class ClusterModel(object):
     ''' base model for clustering (unsupervised)'''
     def __init__(self, project, split=False, score=False, silhouette=False, results=False, params={}):

@@ -136,7 +136,7 @@ def writeCSV(file, data, headers=None):
     ''' saves data to csv delimited file '''
     with open(file, 'w') as outfile:
         csv_writer = csv.writer(outfile, dialect='excel')
-        csv_writer.writerows(data) 
+        csv_writer.writerows(data)
 
 def loadData(file):
     '''check file delimiter and load data set as pandas.DataFrame'''
@@ -206,6 +206,8 @@ class ProjectData(object):
     infile          = 'ml_projects.json'                # should drop target/features from json? lift from data with pd.columns[:-1] & [-1]
     outfile         = 'ml_projects.json'                # write to same file, use git to manage versions
     DF              = {}
+    document_data   = False
+    docs            = {}
     def __init__(self, project='boston_housing', file=None):
         if file:
             self.desc           = 'file used'
@@ -216,17 +218,31 @@ class ProjectData(object):
                 self.loadProjects()
                 if project in self.projects.keys():
                     self.desc       = project # if exists project in self.projects ...
+                    if 'data' in self.projects[self.desc]:
+                        print('data element exists')
+                        print(self.projects[self.desc]['data'])
+                        if self.projects[self.desc]['data'] == 'documents':       # test for document type, used for nlp
+                            self.document_data = True
+                            print(self.document_data)
                     if 'files' in self.projects[self.desc]:
                         self.files  = self.projects[self.desc]['files']
-                        for file in self.files.keys():
+                        if self.document_data == True:
                             try:
-                                self.DF[file]   = loadData(self.files[file])
-                                logger.debug("file is: {}".format(file))
-                                setDF()
-                                summarizeData(desc=file, data=self.DF[file])
+                                for file in self.files.keys():
+                                    self.docs[file] = readFile(self.files[file])    # reads file, no parsing (each line is a document)
                             except Exception as e:
-                                logger.error("issue loading data from: {}".format(file), exc_info=True)
+                                logger.error("issue loading files: ", exc_info=True)
                                 return
+                        else:
+                            for file in self.files.keys():
+                                try:
+                                    self.DF[file]   = loadData(self.files[file])    # assumes intend to create DF
+                                    logger.debug("file is: {}".format(file))
+                                    setDF()
+                                    summarizeData(desc=file, data=self.DF[file])
+                                except Exception as e:
+                                    logger.error("issue loading data from: {}".format(file), exc_info=True)
+                                    return
                         return
                     self.file       = self.projects[self.desc]['file']
                     try:
