@@ -11,30 +11,32 @@
 --DROP USER IF EXISTS dev_etl;
 --CREATE USER sor_etl WITH PASSWORD 'Passw0rd' IN GROUP flights_dev_rw;
 
-create table flight_log(
-    'id_trans',
-    'date_flight',
-    'id_airline',
-    'id_tailnum',
-    'id_flightnum',
-    'id_airport_orig',
-    'id_airport_dest',
-    'time_depart_crs',
-    'time_depart',
-    'time_depart_delay',
-    'time_taxi_out',
-    'time_wheelsoff',
-    'time_wheelson',
-    'time_taxi_in',
-    'time_arrive_crs',
-    'time_arrive',
-    'time_arrive_delay',
-    'time_elapsed_crs',
-    'time_elapsed_act',
-    'stat_cancelled',
-    'stat_diverted',
-    'stat_distance'
+show timezone;
+set timezone = 'America/Los_Angeles';
 
+create table flight_log(
+    'id_trans' int not null,
+    'date_flight' timestamptz not null,
+    'id_airline' varchar(2) not null,
+    'id_tailnum' varchar(6),
+    'id_flightnum' int not null,
+    'id_airport_orig' varchar(3),
+    'id_airport_dest' varchar(3),
+    'time_depart_crs' timestamptz not null,
+    'time_depart' timestamptz,
+    'time_depart_delay' interval,
+    'time_taxi_out' int,
+    'time_wheelsoff' int,
+    'time_wheelson' int,
+    'time_taxi_in' int,
+    'time_arrive_crs' timestamptz not null,
+    'time_arrive' timestamptz,
+    'time_arrive_delay' interval,
+    'time_elapsed_crs' interval,
+    'time_elapsed_act' interval,
+    'stat_cancelled' int,
+    'stat_diverted' int,
+    'stat_miles' int          -- keep imperial measure
 );
 
 create table airlines (

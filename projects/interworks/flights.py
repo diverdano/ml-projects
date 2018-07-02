@@ -163,17 +163,24 @@ def trimFlights(df, type='df'):
         'time_elapsed_act',
         'stat_cancelled',
         'stat_diverted',
-        'stat_distance']
-    flight_log                      = df.drop(drop_columns, axis=1, errors='ignore')
+        'stat_miles']               # strip miles and keep imperial measure vs metric
+    flight_log                      = df.drop(drop_columns, axis=1, errors='ignore')        # don't need inplace with assignment
     flight_log.columns              = (new_col_names)
-    tf_dict                         = {'T':1, 'True':1, 'F':0, 'False':0}                   # change all T, True to 1 and F, False to 0
+#    df[['col.name1', 'col.name2'...]] = df[['col.name1', 'col.name2'..]].astype('data_type')
+#   to_datetime
+#   to_timedelta
+    tf_dict                         = {'T':1, 'True':1, 'F':0, 'False':0, 'NA':0, '1':1, '0':0}     # change all T, True to 1 and F, False to 0
     flight_log['stat_diverted']     = flight_log['stat_diverted'].map(tf_dict)
-    flight_log['stat_cancelled']    = flight_log['stat_cancelled'].map(tf_dict)
-    # df.drop(drop_columns, axis=1, inplace=True, errors='ignore')
-    # df.columns = (new_col_names)
-    # tf_dict = {'T':1, 'True':1, 'F':0, 'False':0}                   # change all T, True to 1 and F, False to 0
-    # df['stat_diverted'] = df['stat_diverted'].map(tf_dict)
-    # df['stat_cancelled'] = df['stat_cancelled'].map(tf_dict)
+    flight_log['stat_cancelled']    = flight_log['stat_cancelled'].map(tf_dict)#.astype('int64', errors='ignore')  # convert upon upload?
+    flight_log['stat_miles']        = flight_log['stat_miles'].apply(lambda x: int(x.split()[0]))
+    cols_time                       = ['time_depart_crs','time_depart','time_arrive_crs','time_arrive','time_wheelsoff','time_wheelson']
+    cols_timedelta                  = ['time_elapsed_crs','time_elapsed_act']
+    cols_int                        = ['id_trans','id_flightnum','time_depart_delay','time_arrive_delay','time_taxi_out','time_taxi_in','time_arrive_crs','time_arrive']
+    flight_log['date_flight']       = flight_log.date_flight.apply(lambda x: pd.to_datetime(x, format='%Y%M%d').date())
+#    flight_log[cols_time]           = flight_log[cols_time].apply(lambda x: pd.to_datetime(x, format='%h%m').time()) # fails on nulls
+#    flight_log[cols_time]           = flight_log[cols_time].apply(lambda x: pd.to_datetime(x, unit='m'))
+    flight_log[cols_timedelta]      = flight_log[cols_timedelta].apply(lambda x: pd.to_timedelta(x, unit='m'))
+    flight_log[cols_int]            = flight_log[cols_int].apply(lambda x: pd.to_numeric(x))
     return(flight_log)
 
 # -- objects --
