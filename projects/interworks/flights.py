@@ -5,6 +5,8 @@ import psycopg2
 import argparse
 import logging
 import re
+from sqlalchemy import create_engine
+import io
 
 # -- logging --
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -42,7 +44,15 @@ def setDF(w=None, c=None, r=None, f='{:,.1f}'):
 def getFlights(file = 'flights.csv', sep = '|'):
     '''return pd dataframe with parsed file data'''
     logger.info('processing flights')
-    flights = pd.read_csv(filepath_or_buffer = file, sep = sep)
+    # true_values : list, default None - Values to consider as True
+    # false_values : list, default None
+    # na_filter : boolean, default True - setting to False can improve performance
+    # dtype : Type name or dict of column -> type, default None
+        # Data type for data or columns. E.g. {'a': np.float64, 'b': np.int32}
+        # Use `str` or `object` to preserve and not interpret dtype.
+        # If converters are specified, they will be applied INSTEAD
+        # of dtype conversion.
+    flights = pd.read_csv(filepath_or_buffer = file, sep = sep, dtype='object')
     flights = flights.rename(columns = {'ORIGAIRPORTNAME':'ORIGINAIRPORTNAME'})     # column name inconsistency in source
     logger.info('flights found: {:,}'.format(len(flights)))
     return(flights)
@@ -67,7 +77,10 @@ def getAirlines(df, type='df'):
         return(airlines)
 
 def getAirports(df, type='df'):
-    '''return airports dataset'''
+    '''return airports dataset
+    time zone ids with DST offsets source http://download.geonames.org/export/dump/timeZones.txt
+
+    '''
     #dft1 = dft1.astype({'a': np.bool, 'c': np.float64})
     logger.info('processing airports')
     airports_df_orig = df.groupby('ORIGINAIRPORTCODE', as_index=False)['ORIGINAIRPORTNAME', 'ORIGINCITYNAME', 'ORIGINSTATE', 'ORIGINSTATENAME'].last()
@@ -75,7 +88,7 @@ def getAirports(df, type='df'):
     airports_df_orig.columns = (['id_airport','name','city','st','state'])      # could join these into 1 statement
     airports_df_dest.columns = (['id_airport','name','city','st','state'])
     airports_df = pd.concat([airports_df_orig, airports_df_dest])
-    airports_df['name'] = airports_df['name'].apply(lambda x: x.split(':')[1])  # strip ':' and trailing text
+    airports_df['name'] = airports_df['name'].apply(lambda x: x.split(': ')[1])  # strip ':' and trailing text
     airports_df.sort_values(by=['id_airport'], axis=0, inplace=True)
     airports_df.drop_duplicates(inplace=True)                                   # perhaps force columns to exclude index...
     airports_df.reset_index(drop=True, inplace=True)
@@ -173,17 +186,42 @@ def trimFlights(df, type='df'):
     flight_log['stat_diverted']     = flight_log['stat_diverted'].map(tf_dict)
     flight_log['stat_cancelled']    = flight_log['stat_cancelled'].map(tf_dict)#.astype('int64', errors='ignore')  # convert upon upload?
     flight_log['stat_miles']        = flight_log['stat_miles'].apply(lambda x: int(x.split()[0]))
-    cols_time                       = ['time_depart_crs','time_depart','time_arrive_crs','time_arrive','time_wheelsoff','time_wheelson']
-    cols_timedelta                  = ['time_elapsed_crs','time_elapsed_act']
-    cols_int                        = ['id_trans','id_flightnum','time_depart_delay','time_arrive_delay','time_taxi_out','time_taxi_in','time_arrive_crs','time_arrive']
-    flight_log['date_flight']       = flight_log.date_flight.apply(lambda x: pd.to_datetime(x, format='%Y%M%d').date())
-#    flight_log[cols_time]           = flight_log[cols_time].apply(lambda x: pd.to_datetime(x, format='%h%m').time()) # fails on nulls
-#    flight_log[cols_time]           = flight_log[cols_time].apply(lambda x: pd.to_datetime(x, unit='m'))
-    flight_log[cols_timedelta]      = flight_log[cols_timedelta].apply(lambda x: pd.to_timedelta(x, unit='m'))
-    flight_log[cols_int]            = flight_log[cols_int].apply(lambda x: pd.to_numeric(x))
+#     cols_time                       = ['time_depart_crs','time_depart','time_arrive_crs','time_arrive','time_wheelsoff','time_wheelson']
+#     cols_timedelta                  = ['time_elapsed_crs','time_elapsed_act']
+#     cols_int                        = ['id_trans','id_flightnum','time_depart_delay','time_arrive_delay','time_taxi_out','time_taxi_in','time_arrive_crs','time_arrive']
+#     flight_log['date_flight']       = flight_log.date_flight.apply(lambda x: pd.to_datetime(x, format='%Y%M%d').date())
+# #    flight_log[cols_time]           = flight_log[cols_time].apply(lambda x: pd.to_datetime(x, format='%h%m').time()) # fails on nulls
+# #    flight_log[cols_time]           = flight_log[cols_time].apply(lambda x: pd.to_datetime(x, unit='m'))
+#     flight_log[cols_time]           = flight_log[cols_time].apply(lambda x: pd.to_timedelta(x, unit='m'))
+#     flight_log[cols_timedelta]      = flight_log[cols_timedelta].apply(lambda x: pd.to_timedelta(x, unit='m', errors='ignore'))
+#     flight_log[cols_int]            = flight_log[cols_int].apply(lambda x: pd.to_numeric(x))
     return(flight_log)
 
 # -- objects --
+
+def sqlalchemy2sql(df, table):
+    '''use psycopg2 instead?'''
+    host        = 'iw-recruiting-test.cygkjm9anrym.us-west-2.rds.amazonaws.com'
+    port        = '5432'
+    database    = 'tests_data_engineering'
+    schema      = 'candidate7206'
+    user        = 'candidate7206'
+    password    = 'vhWPmzt5a60cOZY5'
+    con_str     = 'postgresql+psycopg2://{0}:{1}@{2}:{3}/{4}'.format(user, password, host, port, database)
+    logger.info('connecting to IW db')
+    engine = create_engine(con_str)
+    # df.to_sql('table_name', engine)
+    # engine = create_engine('postgresql+psycopg2://username:password@host:port/database')
+    conn = engine.raw_connection()
+    cur = conn.cursor()
+    output = io.StringIO()
+    df.to_csv(output, sep='\t', header=False, index=False)
+    output.seek(0)
+    contents = output.getvalue()
+    cur.copy_from(output, table, null="") # null values become ''
+    conn.commit()
+    logger.info('records written')
+
 
 class IWDB(object):
     '''object for working with database, preference is to use as a class'''
@@ -209,6 +247,9 @@ class IWDB(object):
         self.cur.execute(sql)                                       # execute a statement
         result = self.cur.fetchone()                                # decide how to display
         logger.info(result)                                         # decide how to display
+    def copyFrom(data, table):
+        '''copy from data object to db table'''
+        self.cur.copy_from(data, table)
     def getDBver(self): self.select(sql='select version()')
     # def getDBversion(self):
     #     '''create cursor, get db version, log and close cursor'''
@@ -344,7 +385,7 @@ Schema: candidate7206
 '''
 
 if __name__== '__main__':
-    setDF()
+    setDF(r=30)
     flights = getFlights()
     airlines = getAirlines(flights)
     airports = getAirports(flights)
