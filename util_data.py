@@ -6,6 +6,7 @@
 import pandas as pd
 import numpy as np
 import simplejson as json
+import xlrd                                     # for xls consumption
 import csv                                      # for csv sniffer
 import logging
 import requests                                 # requesting URL's
@@ -120,6 +121,19 @@ def dfCol2Numeric(df, cols):
     return df[cols].apply(pd.to_numeric, errors='coerce')
 
 # == i/o ==
+# abandon using pd.read_excel instead
+# def xls2csv(xls_file, csv_file):
+#     '''convert xls/binary file to csv/text'''
+#     wb      = xlrd.open_workbook(xls_file)
+#     # if len(wb.sheet_names()) == 1  : sh = wb.sheets(wb.sheet_names()[0])
+#     # else                    : logger.error('need to process multiple sheets')    # todo...
+# #    sh      = wb.sheet_by_name('Sheet1') # need to cycle through sheets?
+#     sh      = wb.sheets()[0]            # just assume, take first sheet for now
+#     txt     = open(csv_file, 'wb')
+#     wr      = csv.writer(txt, quoting=csv.QUOTE_ALL)
+#     for rownum in xrange(sh.nrows):
+#         wr.writerow(sh.row_values(rownum))
+#     txt.close()
 
 def sniffDelim(file):
     '''helper functionuse csv library to sniff delimiters'''
