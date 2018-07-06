@@ -162,17 +162,27 @@ def printLinearRegressionModel():
 
 class WordBag(object):
     ''' manipulate word bags '''
+    segments = []
     def __init__(self, project):
         self.bag        = util_data.ProjectData(project)
     def tokenize(self):
-        for docs in self.bag.docs:
-            for doc in docs:
-                doc = nlp(doc)          # still working here
+        ''' training data has 2 segments/categories of documents - 2 category classification '''
+        self.segments = [item for item in self.bag.docs.keys()]
+        # for segment in self.segments:
+        #     for doc in self.bag.docs['segment']:
+        #         tokens = nlp(doc)          # still working here
+    def tokenizeNode(self, segment, doc):
+        ''' tokenize specific node within selected segment '''
+        token = nlp(self.bag.docs[segment][doc])          # still working here
+        return token
     def test_spacy(self, text=u'Apple is looking at buying U.K. startup for $1 billion'):
         print(text)
         doc = nlp(text)
         for token in doc:
             print(token.text, token.pos_, token.dep_)
+
+
+
 class ClusterModel(object):
     ''' base model for clustering (unsupervised)'''
     def __init__(self, project, split=False, score=False, silhouette=False, results=False, params={}):

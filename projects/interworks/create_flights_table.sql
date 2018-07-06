@@ -1,0 +1,25 @@
+create table flights(
+    id_trans int not null,
+    date_flight timestamptz not null,
+    id_airline varchar(2) not null,
+    id_tailnum varchar(6),
+    id_flightnum int not null,
+    id_airport_orig varchar(3),
+    id_airport_dest varchar(3),
+    time_depart_crs int,
+    time_depart int,
+    time_depart_delay int,
+    time_taxi_out int,
+    time_wheelsoff int,
+    time_wheelson int,
+    time_taxi_in int,
+    time_arrive_crs int,
+    time_arrive int,
+    time_arrive_delay int,
+    time_elapsed_crs int,
+    time_elapsed_act int,
+    stat_cancelled int,
+    stat_diverted int,
+    stat_miles int,          -- keep imperial measure
+    primary key (id_trans)
+);
