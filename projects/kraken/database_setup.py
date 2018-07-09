@@ -1,5 +1,6 @@
 #import sys
-from sqlalchemy import Column, ForeignKey, Integer, String, Float
+import sqlite3 # alternative to sqlalchemy
+from sqlalchemy import Column, ForeignKey, Integer, String, Float, Boolean
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from sqlalchemy import create_engine
@@ -8,73 +9,73 @@ from sqlalchemy.orm import sessionmaker
 Base = declarative_base()
 
 class Deposits(Base):
-    __tablename__       = 'account'
-    id                  = Column(String(40), nullable = False)
-
-    account             =
-    address             =
-    amount              =
-    bip125-replaceable  =
-    blockhash           =
-    blockindex          =
-    blocktime           =
-    category            =
-    confirmations       =
-    involvesWatchonly   =
-    label               =
-    time                =
-    timereceived        =
-    txid                =
-    vout                =
-    walletconflicts     =
-
-    ''' reference data, couple be moved to DB if needed '''
-    secType             = ['equity','option','future','bond']
-    exchange            = ['NASDAQ','CME','CBOE','NYSE','OTC']
-
-
-
-class Acount(Base):
-    pass
-def Accounts(trans):
-    # * Wesley Crusher: mvd6qFeVkqH6MNAS2Y2cLifbdaX5XUkbZJ
-    # * Leonard McCoy: mmFFG4jqAtw9MoCC88hw5FNfreQWuEHADp
-    # * Jonathan Archer: mzzg8fvHXydKs8j9D2a8t7KpSXpGgAnk4n
-    # * Jadzia Dax: 2N1SP7r92ZZJvYKG2oNtzPwYnzw62up7mTo
-    # * Montgomery Scott: mutrAf4usv3HKNdpLwVD4ow2oLArL6Rez8
-    # * James T. Kirk: miTHhiX3iFhVnAEecLjybxvV5g8mKYTtnM
-    # * Spock: mvcyJMiAcSXKAEsQxbW9TYZ369rsMG6rVV
-    pass
-
-class Asset(Base):
-    __tablename__   = 'asset'
-    id              = Column(Integer, primary_key = True, autoincrement = True)
-    type            = Column(String(10), nullable = False)  # equity, option, future, bond
-    exchange        = Column(String(10), nullable = False)  # NASDAQ, CME, CBOE, NYSE
-    symbol          = Column(String(20), nullable = False)  # security symbol or bond cusip
-    description     = Column(String(20), nullable = False)
-    size            = Column(Integer, nullable = False)     # contract size; stock = $1, S&P 500 e-mini = $50, vix = $1000
-    coupon          = Column(Float)                         # only for bonds
-    expiry          = Column(String(25))                    # for equity options, futures, 'maturity' for bonds
-    strike          = Column(Integer)                       # for options
+    __tablename__       = 'deposits'
+    id                  = Column(Integer, primary_key = True, autoincrement = True)
+    account             = Column(String(5))
+    address             = Column(String(35))
+    amount              = Column(Float)
+    bip125_replaceable  = Column(String(2))
+    blockhash           = Column(String(64))
+    blockindex          = Column(Integer)
+    blocktime           = Column(Integer)
+    category            = Column(String(8))
+    confirmations       = Column(Integer)
+    involvesWatchonly   = Column(Boolean)
+    label               = Column(String(5))
+    time                = Column(Integer)
+    timereceived        = Column(Integer)
+    txid                = Column(String(64))
+    vout                = Column(Integer)
+    walletconflicts     = Column(String(5))
     def __repr__(self):
-        return("\n\tasset id: {0}\t{1}\t{2}\t{3}\t{4}\t{5}".format(self.id, self.type, self.exchange, self.symbol, self.description, self.size))
+        return(str(self.__dict__))
+        # return("\n\tasset id: {0}\t{1}\t{2}\t{3}\t{4}\t{5}".format(self.id, self.type, self.exchange, self.symbol, self.description, self.size))
+    def __init__(self, account, address, amount,
+        bip125_replaceable,
+        blockhash,
+        blockindex,
+        blocktime,
+        category,
+        confirmations,
+        involvesWatchonly,
+        label,
+        time,
+        timereceived,
+        txid,
+        vout,
+        walletconflicts):
+        '''load attributes into object'''
+        self.account = account
+        self.address    = address
+        self.amount     = amount
+        self.bip125_replaceable = bip125_replaceable
+        self.blockhash  = blockhash
+        self.blockindex = blockindex
+        self.blocktime  = blocktime
+        self.category   = category
+        self.confirmations  = confirmations
+        self.involvesWatchonly  = involvesWatchonly
+        self.label      = label
+        self.time       = time
+        self.timereceived = timereceived
+        self.txid       = txid
+        self.vout       = vout
+        self.walletconflicts = walletconflicts
 
-class Allocation(Base):
-    __tablename__   = 'allocation'
-    id              = Column(Integer, primary_key = True, autoincrement = True)
-    date_mod        = Column(String(25), nullable = False)
-    portfolio       = Column(String(10), nullable = False)          # use a string name for portfolio
-    asset_id        = Column(Integer, ForeignKey('asset.id'))
-    asset           = relationship(Asset)
-    allocation      = Column(Float, nullable = False)
-    def __repr__(self):
-#        return("\n\tallocation id: {0}\t{1}\t{2}\t{3}\t{4:.2%}".format(self.id, self.portfolio, self.asset_id, self.asset, self.allocation))
-        return("\n\tallocation id: {0}\t{1}\t{2}\t{3}\t{4:.2%}".format(self.id, self.portfolio, self.asset_id, self.asset, self.allocation))
+class RefData(object):
+    ''' reference data, could be moved to DB if needed '''
+    addresses = {
+        'mvd6qFeVkqH6MNAS2Y2cLifbdaX5XUkbZJ': 'Wesley Crusher',
+        'mmFFG4jqAtw9MoCC88hw5FNfreQWuEHADp': 'Leonard McCoy',
+        'mzzg8fvHXydKs8j9D2a8t7KpSXpGgAnk4n': 'Jonathan Archer',
+        '2N1SP7r92ZZJvYKG2oNtzPwYnzw62up7mTo': 'Jadzia Dax',
+        'mutrAf4usv3HKNdpLwVD4ow2oLArL6Rez8': 'Montgomery Scott',
+        'miTHhiX3iFhVnAEecLjybxvV5g8mKYTtnM': 'James T. Kirk',
+        'mvcyJMiAcSXKAEsQxbW9TYZ369rsMG6rVV': 'Spock'
+    }
 
-## insert at end of file ##
 def createDBsession(db_info):
     ''' create session to db '''
     return sessionmaker()(bind=create_engine(db_info))
-#engine = create_engine('sqlite:///simco.db')
-#Base.metadata.create_all(engine)        # suppress this if creating DB via SQL script?
+engine = create_engine('sqlite:///deposits.db')
+Base.metadata.create_all(engine)        # suppress this if creating DB via SQL script?
