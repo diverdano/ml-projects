@@ -6,7 +6,6 @@ import logging
 import simplejson as json
 from database_setup import Base, Deposits, RefData, createDBsession
 
-
 # -- logging --
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -52,6 +51,15 @@ def loadDF2table():
     logger.info('deposits records: {}'.format(deposits.count()))
     # logger.info("deposits loaded: {}".format(str(len(list(deposits)))))
 
+def loadDFfromtable():
+    '''load df from table allowing parameter injection'''
+    d = {'fields': "id, address, amount, blockhash, blockindex, blocktime,\
+        category, confirmations, time, txid, vout",
+        'table': "deposits"}
+    s = "select {fields} from {table};"
+    s.format(**d)
+    return(pd.read_sql(s.format(**d), con, index_col='id'))
+
 # def df2deposit(df):
 #     '''load df records into orm class'''
 #     deposits = []
@@ -64,21 +72,25 @@ def loadDF2table():
 
 # -- transform data --
 
+def evalMaxCol(df):
+    '''evaluate df, identify max column widths for string fields'''
+    max_col_len = df.columns.str.len().max() + 10
+    for column in df.columns:
+        try:
+            logger.info('column: {0}'.format(column).ljust(max_col_len) + 'dtype: {0} len: {1}'.format(df[column].dtype, df[column].str.len().max()))
+        except AttributeError:
+            logger.info('column: {0}'.format(column).ljust(max_col_len) + 'dtype: {0}'.format(df[column].dtype))
+
 def evalDFcols(df):
     '''evaluate DF columns, return str length, convert list to str'''
-    # max_col_len = df.columns.str.len().max() + 10
     for column in df.columns:
-        # try:
-        #     logger.info('column: {0}'.format(column).ljust(max_col_len) + 'dtype: {0} len: {1}'.format(df[column].dtype, df[column].str.len().max()))
-        # except AttributeError:
-        #     logger.info('column: {0}'.format(column).ljust(max_col_len) + 'dtype: {0}'.format(df[column].dtype))
         if type(df[column][0]) is list:
             df[column] = df[column].apply(','.join)             # convert list to string (these are all empty...)
 
 def validDeposits(df):
     '''identify valid deposits - has 6 confirmations, need to de-dup responses'''
     logger.info('processing transactions')
-# time always equals timereceived for sample data
+    # time always equals timereceived for sample data
     df.drop(['timereceived'], axis=1, inplace=True)
 
 #     airlines_df = df.groupby('AIRLINECODE', as_index=False )['AIRLINENAME'].last()
@@ -109,6 +121,10 @@ if __name__== '__main__':
         deposits    = session.query(Deposits)                                   # load global objects for convenience
         deleteFromtable()
         loadDF2table()
-        dep_df      = pd.read_sql('deposits', con, index_col='id')
+        dep_df_old  = pd.read_sql('deposits', con, index_col='id')
+        dep_df      = loadDFfromtable()
+        ref_data    = RefData().addresses
+        data_ref    = dict((v,k) for k,v in ref_data.items())
+        spock       = dep_df[dep_df.address == data_ref['Spock']]
     except:
         logger.exception("issue loading database items", exc_info=1)
