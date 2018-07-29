@@ -39,7 +39,8 @@ class BankData(object):
     branches    = "Domestic Branches"
     def __init__(self, banks):
         self.banks          = util_data.ProjectData(banks).data[[self.number, self.name, self.site, self.main, self.branches, self.assets]]
-        self.banks.columns = ['bankID','name','charter','location','branches', 'assets']
+        # self.banks.columns = ['bankID','name','charter','location','branches', 'assets']
+        self.banks.columns = ['name','rank', 'id','location','charter', 'assets','assets_dom','assets_dom_pct','assets_cum_pct','branches','branches_for','ibf','owned_for_pct']
         self.banks.apply(lambda x: pd.to_numeric(x, errors='ignore'))
     def sort_assets(self, df_col=None):
         pd.set_option('display.max_rows', df_col)               # show default number of rows for summary
